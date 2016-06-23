@@ -1,0 +1,9 @@
+.user-features ul{
+    list-style: none;
+    color: var(--white);
+}
+.user-features li{
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 10px;
+}

@@ -1,5 +1,5 @@
 <section class="o-section o-grid {{$fragment['classes'] or ''}} {{$fragment['column'] or ''}}">
-    @if(count($fragment['relationships']['fragments']) > 0)
+    @if(isset($fragment['relationships']['fragments']))
         @foreach ($fragment['relationships']['fragments'] as $subfragment)
             @includeIf('fragments.fragment', ['fragment' => $subfragment])
         @endforeach

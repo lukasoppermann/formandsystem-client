@@ -1,15 +1,40 @@
 .o-content{
     padding-top: 80px;
-    max-width: 120rem;
     width: 100%;
-    margin: 0 auto;
 }
-.o-section{
+/* ---------------------
+ * Section
+ */
+.o-content > .o-section{
+    position: relative;
     padding: 0 2.5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: block;
+}
+.o-section--red{
+    background-color: var(--copra-red);
+}
+.o-section--red:after, .o-section--red:before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: var(--copra-red);
+    width: 100%;
+    height: 100%;
+}
+.o-section--red:after{
+    left: auto;
+    right: -100%;
 }
 /* ---------------------
  * Text
  */
+.o-text--centered{
+    text-align: center;
+}
  .o-text h1, .o-text h2{
    text-align: center;
    font-size: 32px;
@@ -21,7 +46,7 @@
    margin: 0 auto 30px;
    border-bottom: 1px solid rgb(225,70,75);
  }
-.o-text blockquote, .o-text h3{
+.o-text blockquote{
    text-align: center;
    font-size: 30px;
    font-weight: 200;
