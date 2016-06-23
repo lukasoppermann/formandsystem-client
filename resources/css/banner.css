@@ -1,0 +1,129 @@
+.banner{
+	padding-top: 80px;
+	text-align: left;
+}
+.banner .o-image{
+	height: 500px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.banner .o-image .o-image__img{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 2%;
+	width: 96%;
+}
+.banner .o-text{
+	text-align: left;
+	position: relative;
+	z-index: 10;
+	background: rgb(225,70,75);
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px;
+	display: inline-block;
+	margin: -120px 0 50px 4%;
+}
+.banner .o-text:after{
+	content:"";
+	background: rgba(165,30,40,0.8);
+	display: block;
+	width: 40%;
+	height: 7px;
+	position: absolute;
+	bottom: -7px;
+	left: 0;
+}
+.banner .o-text:before{
+	content:"";
+	background: rgb(165,30,40);
+	display: block;
+	width: 25%;
+	height: 7px;
+	position: absolute;
+	bottom: -7px;
+	left: 0;
+}
+.banner .o-text h1{
+	text-align: left;
+	font-size: 64px;
+	font-weight: 200;
+	padding: 0 20px 0 0;
+	color: rgb(255,255,255);
+	margin: 0 0 10px;
+}
+.banner .o-text h2{
+	text-align: left;
+	font-size: 54px;
+	font-weight: 200;
+	padding: 0 20px 0 0;
+	color: rgb(255,255,255);
+	margin: 0 0 10px;
+}
+.banner .o-text p, .banner .o-text h3{
+	text-align: left;
+	font-weight: 200;
+	font-size: 20px;
+	color: rgb(255,255,255);
+}
+
+.banner .o-text a{
+	font-size: 75%;
+	display: inline-block;
+	background: rgba(165,30,40,.75);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+	color: rgb(255,255,255);
+	padding: 2px 10px 2px 10px;
+	margin-left: 10px;
+	-webkit-transition: background .5s ease, -webkit-box-shadow .5s ease;
+					-moz-transition: background .5s ease, -moz-box-shadow .5s ease;
+					-o-transition: background .5s ease, box-shadow .5s ease;
+					transition: background .5s ease, box-shadow .5s ease;
+}
+.banner .o-text a:after{
+	content: "➞";
+	padding-left: 5px;
+}
+
+
+
+.large .banner .block-content-copy a:hover{
+	background: rgba(165,30,40,1);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+@media screen and (max-width: 600px) {
+	.banner .o-image{
+		height: 350px;
+	}
+	.banner .o-image .o-image__img{
+		left: 0;
+		width: 100%;
+	}
+	.banner .block-content-copy{
+		margin: -60px 0 50px 0;
+	}
+	.banner .block-content-copy h1{
+		font-size: 32px;
+		padding: 0 20px 0 0;
+	}
+	.banner .block-content-copy h2{
+		font-size: 22px;
+	}
+	.block-content-copy{
+		padding: 10px 20px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.banner .o-image{
+		height: 250px;
+	}
+}

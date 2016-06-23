@@ -1,0 +1,5 @@
+
+var elements=document.querySelectorAll('[data-click]');Array.prototype.forEach.call(elements,function(el,i){el.addEventListener('click',function(){project[el.getAttribute('data-click')]();});});var scrollTopOffset=function(offset,callbackTrue,callbackFalse,parameter){window.addEventListener('scroll',function(f){clearTimeout(f);f=setTimeout(function(){if((document&&document.documentElement.scrollTop||document.body&&document.body.scrollTop||0)>offset){callbackTrue.call(window,parameter)}else{callbackFalse.call(window,parameter)}},10);});}
+var project={};function ready(fn){if(document.readyState!='loading'){fn();}else{document.addEventListener('DOMContentLoaded',fn);}}
+ready(function(window){scrollTopOffset(100,function(el){el.classList.add('is-scrolled');},function(el){el.classList.remove('is-scrolled');},document.querySelector('.o-header'));}(window));project.toggle_mobile_menu=function(){document.querySelector('.c-nav--pages').classList.toggle('is-active');}
+//# sourceMappingURL=app.js.map

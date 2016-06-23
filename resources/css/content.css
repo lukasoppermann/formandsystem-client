@@ -1,0 +1,43 @@
+.o-content{
+    padding-top: 80px;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+.o-section{
+    padding: 0 2.5rem;
+}
+/* ---------------------
+ * Text
+ */
+ .o-text h1, .o-text h2{
+   text-align: center;
+   font-size: 32px;
+   line-height: 120%;
+   font-weight: 200;
+   color: rgb(100,100,100);
+   display: table;
+   padding: 10px 10px;
+   margin: 0 auto 30px;
+   border-bottom: 1px solid rgb(225,70,75);
+ }
+.o-text blockquote, .o-text h3{
+   text-align: center;
+   font-size: 30px;
+   font-weight: 200;
+   width: 100%;
+   margin: 0 auto 10px;
+ }
+ .o-text blockquote blockquote{
+   font-size: 24px;
+   color: rgb(90,170,150);
+ }
+ .o-text blockquote p{
+   font-size: inherit;
+ }
+ .block-content-image{
+   text-align: center;
+ }
+ .block-content-image img{
+   display: inline-block;
+ }

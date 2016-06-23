@@ -1,0 +1,25 @@
+:root{
+    --copra-red: rgb(225,70,75);
+    --copra-turquoise: rgb(90,170,150);
+/* --------------
+:: Default general colors
+Useful for every website
+*/
+    --black: rgb(0,5,10);
+    --dark-gray: rgb(60,65,70);
+    --gray: rgb(115,120,125);
+    --medium-gray: rgb(150,155,160);
+    --light-gray: rgb(210,215,220);
+    --white-gray: rgb(240,243,246);
+    --white: rgb(255,255,255);
+
+/* --------------
+:: Text colors
+*/
+    --text-black: var(--black);
+    --text-dark-gray: var(--dark-gray);
+    --text-gray: var(--gray);
+    --text-light-gray: var(--medium-gray);
+    --text-white: var(--white);
+    --text-red: var(--copra-red);
+}

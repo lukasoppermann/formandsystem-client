@@ -1,0 +1,314 @@
+/* ----------------------
+ * Header
+ */
+.o-header{
+	height: 6rem;
+	width: 100%;
+	background: var(--white);
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	transition: background .75s ease .0s;
+}
+.o-header.is-scrolled{
+	background: color(var(--white) alpha(95%));
+}
+.o-header:after{
+	opacity: 0;
+	transition: opacity .75s ease .0s;
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+.o-header.is-scrolled:after{
+	opacity: 1;
+}
+.o-header__content{
+	position: relative;
+	max-width: 120rem;
+	height: 100%;
+	margin: 0 auto;
+	text-align: right;
+}
+@media (max-width: 750px) {
+	.o-header__content{
+		width: 100%;
+	}
+	.o-header:after{
+		opacity: 1;
+	}
+	.o-header__content:before{
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: var(--white);
+		z-index: 2;
+		box-shadow: var(--shadow-default);
+	}
+}
+/* ----------------------
+ * Main Navigation
+ */
+.c-nav--pages{
+	height: 100%;
+    position: relative;
+	display: inline-block;
+	margin-right: 2.5rem;
+}
+.c-nav--pages:after{
+	z-index: 1;
+	height: 4px;
+	width: 100%;
+	background: rgb(225,225,225);
+	content: "";
+	position: absolute;
+	left: 0;
+    top: 0;
+}
+.o-nav__item{
+	text-align: left;
+	position: relative;
+    display: block;
+	float: left;
+	text-decoration: none;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 20px 15px;
+	font-size: 18px;
+	line-height: 100%;
+	text-transform: UPPERCASE;
+	color: var(--gray);
+    transition: color .3s ease, background .75s ease;
+}
+.o-nav__item.is-active{
+	color: var(--text-red);
+}
+@media (min-width: 751px) {
+	.o-nav__item:hover{
+	    color: var(--dark-gray);
+	    background: color(var(--medium-gray) alpha(10%));
+	}
+}
+.o-nav__item:before{
+	position: absolute;
+	content: "";
+	display: block;
+	z-index: 2;
+	height: 4px;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.o-nav__item:before{
+	background: color(var(--copra-red) alpha(70%));
+}
+.o-nav__item.is-active:before{
+	background: var(--copra-red);
+}
+.o-nav__item.is-active ~ .o-nav__item:before{
+	background: transparent;
+}
+/* -------------- */
+/* Mobile */
+.menu-icon{
+	display: none;
+}
+@media (max-width: 750px) {
+	.c-nav--pages{
+		height: auto;
+		width: 100%;
+		margin: 0;
+		background: var(--white);
+		float: left;
+		transform: translateY(-105%);
+		transition: transform .5s cubic-bezier(.5,0,.4,1);
+		box-shadow: var(--shadow-default)
+	}
+	.c-nav--pages.is-active{
+		transform: translateY(0rem);
+	}
+	.c-nav--pages:after{
+		display: none;
+	}
+	.menu-icon{
+		position: relative;
+		display: block;
+		float: right;
+		height: 60px;
+		font-size: 20px;
+		line-height: 20px;
+		padding: 19px 15px;
+		cursor: pointer;
+		text-transform: uppercase;
+		font-weight: var(--bold);
+		color: var(--text-red);
+		z-index: 10;
+	}
+	.o-nav__item{
+		width: 100%;
+		border-bottom: 1px solid rgb(225,225,225);
+	}
+	.o-nav__item:last-child{
+		border-bottom: none;
+	}
+	.o-nav__item:before, .o-nav__item.is-active:before{
+		display: none;
+	}
+}
+/* ----------------------
+	Logo
+*/
+.logo{
+	display: block;
+	position: absolute;
+	margin-left: 20px;
+	width: 140px;
+	height: 110px;
+	overflow: visible;
+}
+.logo svg{
+	position: relative;
+	z-index: 2;
+}
+.logo-shadow{
+	z-index: 1;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 170px;
+	height: 130px;
+	background-image:url("../../media/logo-shadow.png");
+	background-size: 170px 130px;
+}
+@media (max-width: 750px) {
+  	.logo-shadow, .o-logo__bg {
+    	display: none;
+  	}
+	.logo{
+		float: none;
+		position: absolute;
+		top: 0;
+		margin-left: 10px;
+		z-index: 30;
+	}
+	#Logo_White_Gradient, #Logo_White_Gradient g {
+		display: block;
+	}
+	#Logo_White_Gradient{
+		-webkit-transform-origin: 88px 36px;
+		-moz-transform-origin: 88px 36px;
+		-ms-transform-origin: 88px 36px;
+		-o-transform-origin: 88px 36px;
+		transform-origin: 88px 36px;
+		-webkit-transform: scale(1.8);
+		-moz-transform: scale(1.8);
+		-ms-transform: scale(1.8);
+		-o-transform: scale(1.8);
+		transform: scale(1.8);
+	}
+	#Logo_White_Gradient path{
+		fill: var(--copra-red);
+	}
+	.logo, .logo svg{
+		height: 60px;
+		width: 110px;
+	}
+}
+/* ----------------------
+    Footer Navigation
+*/
+.navigation--footer{
+	padding: 20px 0;
+}
+.navigation--footer a{
+	font-weight: 200;
+	color: rgb(100,100,100);
+	font-size: 20px;
+	padding: 5px 20px;
+	position: relative;
+}
+.navigation--footer a:before{
+	content: "";
+	display: block;
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	left: 0;
+	left: -webkit-calc(20px);
+	left: -moz-calc(20px);
+	left: calc(20px);
+	bottom: -3px;
+	height: 3px;
+	background-color: rgb(225,70,75);
+	-webkit-transition: width 0s ease .5s, opacity .4s ease;
+	-moz-transition: width 0s ease .5s, opacity .4s ease;
+	-o-transition: width 0s ease .5s, opacity .4s ease;
+	transition: width 0s ease .5s, opacity .4s ease;
+}
+.large .navigation--footer a:hover:before{
+	opacity: 1;
+	width: 100%;
+	width: -webkit-calc(100% - 40px);
+	width: -moz-calc(100% - 40px);
+	width: calc(100% - 40px);
+	-webkit-transition: width .35s ease, opacity 0s ease 0s;
+	-moz-transition: width .35s ease, opacity 0s ease 0s;
+	-o-transition: width .35s ease, opacity 0s ease 0s;
+	transition: width .35s ease, opacity 0s ease 0s;
+}
+/* ----------------------
+		Main Navigation List
+*/
+.o-nav-list li > ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: auto;
+	z-index: 2;
+}
+.o-nav-list li > ul:before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	margin-left: -10px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-color: transparent transparent rgb(225,70,75) transparent;
+}
+.o-nav-list li > ul > li{
+	background: rgb(225,70,75);
+	float: left;
+	width: 100%;
+}
+.o-nav-list li > ul > li a{
+	color: rgb(165,30,40);
+}
+.o-nav-list li > ul > .is-active > a{
+	color: rgb(255,255,255);
+}
+.o-nav-list li > ul ul{
+	width: auto;
+}
+.large .o-nav-list > ul > li:hover > ul{
+	display: block;
+}
+.o-nav-list .is-active > a{
+	color: rgb(225,70,75);
+}
