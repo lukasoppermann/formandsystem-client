@@ -13,4 +13,10 @@
 Route::get('/', function(){
     return redirect('/home');
 });
+Route::post('/bust-cache', function(\Illuminate\Http\Request $request){
+    if($request->json('code') === env('API_CACHE_SECRET')){
+        \Log::debug('Kill cache');
+    }
+});
+
 Route::get('/{page?}/{sublink?}', 'Pages@show');

@@ -46,8 +46,8 @@
     .o-grid__column--md-11 { width: 91.666667%; }
     .o-grid__column--md-12 { width: 100%; }
 }
-
-.prepend-1 { margin-left: 8.609272%; }
+.prepend-one-half { margin-left: 4%; }
+.prepend-1 { margin-left: 8%; }
 .prepend-2 { margin-left: 17.218543%; }
 .prepend-3 { margin-left: 25.827815%; }
 .prepend-4 { margin-left: 34.437086%; }
@@ -83,7 +83,8 @@
 .pull-10 { left: -86.092715%; }
 .pull-11 { left: -94.701987%; }
 
-.append-1 { margin-right: 8.609272%; }
+.append-one-half { margin-right: 4%; }
+.append-1 { margin-right: 8%; }
 .append-2 { margin-right: 17.218543%; }
 .append-3 { margin-right: 25.827815%; }
 .append-4 { margin-right: 34.437086%; }

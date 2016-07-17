@@ -50,6 +50,7 @@ class Pages extends AbstractApiService
         }
         // build & share menus
         foreach($this->menus['menus'] as $slug => $menu){
+            $menu['pages'] = $menu['pages']->sortBy('position');
             view()->share('menu_'.$slug, view('layout.menu', $menu)->render());
         }
     }
@@ -120,7 +121,7 @@ class Pages extends AbstractApiService
      */
     protected function assemble($items, $included)
     {
-        return (new Collection($items))->map(function($item) use ($included){
+        return collect($items)->map(function($item) use ($included){
             // get attributes & relationships
             return array_merge($item['attributes'],[
                 'relationships' => $this->getRelationships($item['relationships'], $included)
