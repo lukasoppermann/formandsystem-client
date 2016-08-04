@@ -13,7 +13,7 @@ abstract class AbstractApiService
     {
         // merge config
         $config = array_merge([
-            'url'           => 'http://formandsystem-api.dev',
+            'url'           => env('FS_API_URL'),
             'version'       => '1',
             'client_id'     => env('FS_API_CLIENT_ID'),
             'client_secret' => env('FS_API_CLIENT_SECRET'),
