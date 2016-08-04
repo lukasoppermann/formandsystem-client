@@ -4,6 +4,8 @@
     box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 0 1px rgba(0,0,0,0.15);
     padding: var(--medium);
     box-sizing: border-box;
+    width: 96%;
+    margin: 0 2% 0 2%;
 }
 /*.o-feature.o-feature--first{
     margin-left: calc(8% - 2.5rem);

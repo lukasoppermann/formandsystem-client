@@ -9,8 +9,8 @@
         isset($fragment['meta']['columns']['lg']) ? $fragment['column'] .= ' o-grid__column--lg-'.$fragment['meta']['columns']['lg'] : '';
 ?>
 
-@if($fragment['type'] !== 'section')
-    <div class="o-fragment {{$fragment['column'] or ''}} {{$fragment['classes'] or ''}} {{$fragment['custom_classes'] or ''}}">
+@if($fragment['type'] !== 'section' && $fragment['type'] !== 'collection')
+    <div class="o-fragment {{$fragment['column'] or ''}}">
 @endif
     @if(View::exists('fragments.'.$fragment['type']))
         @include('fragments.'.$fragment['type'], $fragment)

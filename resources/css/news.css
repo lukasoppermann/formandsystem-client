@@ -1,0 +1,28 @@
+.o-news{
+	margin-left: 2%;
+	margin-right: 2%;
+	padding: 25px;
+	width: 96%;
+	box-sizing: border-box;
+	border-left: 4px solid rgb(225,70,75);
+    background-color: rgb(255,255,255);
+    margin: 0 20px 25px 20px;
+    padding: 15px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 0 1px rgba(0,0,0,0.15);
+}
+.o-news__image{
+	max-width: 100%;
+	margin-bottom: 25px;
+}
+.o-news__image img{
+	max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.news .post-preview{
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 15px;
+		width: 100%;
+	}
+}

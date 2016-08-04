@@ -1,16 +1,16 @@
 .o-grid {
     text-align: justify !important;
     text-justify: distribute-all-lines;
-    font-size: 0.1px;
+    font-size: .1px !important;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
-.o-grid:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
+/*.o-grid:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}*/
 .o-grid.no-pseudo:after {
   display: none;
 }
@@ -38,7 +38,7 @@
     .o-grid__column--md-3 { width: 25%; }
     .o-grid__column--md-4 { width: 33%; }
     .o-grid__column--md-5 { width: 41.666667%; }
-    .o-grid__column--md-6 { width: 50%; }
+    .o-grid__column--md-6 { width: 49.5%; }
     .o-grid__column--md-7 { width: 58.333333%; }
     .o-grid__column--md-8 { width: 66.666667%; }
     .o-grid__column--md-9 { width: 75%; }
