@@ -228,48 +228,6 @@
 	}
 }
 /* ----------------------
-    Footer Navigation
-*/
-.navigation--footer{
-	padding: 20px 0;
-}
-.navigation--footer a{
-	font-weight: 200;
-	color: rgb(100,100,100);
-	font-size: 20px;
-	padding: 5px 20px;
-	position: relative;
-}
-.navigation--footer a:before{
-	content: "";
-	display: block;
-	position: absolute;
-	opacity: 0;
-	width: 0;
-	left: 0;
-	left: -webkit-calc(20px);
-	left: -moz-calc(20px);
-	left: calc(20px);
-	bottom: -3px;
-	height: 3px;
-	background-color: rgb(225,70,75);
-	-webkit-transition: width 0s ease .5s, opacity .4s ease;
-	-moz-transition: width 0s ease .5s, opacity .4s ease;
-	-o-transition: width 0s ease .5s, opacity .4s ease;
-	transition: width 0s ease .5s, opacity .4s ease;
-}
-.large .navigation--footer a:hover:before{
-	opacity: 1;
-	width: 100%;
-	width: -webkit-calc(100% - 40px);
-	width: -moz-calc(100% - 40px);
-	width: calc(100% - 40px);
-	-webkit-transition: width .35s ease, opacity 0s ease 0s;
-	-moz-transition: width .35s ease, opacity 0s ease 0s;
-	-o-transition: width .35s ease, opacity 0s ease 0s;
-	transition: width .35s ease, opacity 0s ease 0s;
-}
-/* ----------------------
 		Main Navigation List
 */
 .o-nav-list li > ul{
