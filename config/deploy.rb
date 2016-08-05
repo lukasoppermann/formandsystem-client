@@ -33,7 +33,7 @@ namespace :deploy do
             # execute "cd #{fetch(:release_path)} && \Illuminate\\Foundation\\ComposerScripts::postInstall"
             execute "cd #{fetch(:release_path)} && /usr/local/bin/php5-56STABLE-CLI artisan clear-compiled"
             execute "cd #{fetch(:release_path)} && /usr/local/bin/php5-56STABLE-CLI artisan optimize"
-            execute "mv #{fetch(:release_path)}/media #{fetch(:release_path)}/public/media/"
+            execute "mv #{fetch(:release_path)}/media #{fetch(:release_path)}/public/media"
         end
     end
 
