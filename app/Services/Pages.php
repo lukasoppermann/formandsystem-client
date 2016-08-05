@@ -35,6 +35,7 @@ class Pages extends AbstractApiService
     {
         // get all menus
         $this->menus = $this->getMenus(array_slice(app('request')->segments(), -1)[0]);
+        $footer = $this->getMenus(array_slice(app('request')->segments(), -1)[0], '[slug]=footer');
         // only run in get requests
         if( app('request')->method() === 'GET' ){
             // get active path
@@ -42,7 +43,7 @@ class Pages extends AbstractApiService
             // active parts
             $this->active['parts'] = app('request')->segments();
             // active item
-            $this->active['page'] = $this->menus['active_page'];
+            $this->active['page'] = $this->menus['active_page'] !== null ? $this->menus['active_page'] : $footer['active_page'];
             // active parameters
             $this->active['parameters'] = app('request')->query();
             // share active with views
@@ -52,6 +53,8 @@ class Pages extends AbstractApiService
         foreach($this->menus['menus'] as $slug => $menu){
             $menu['pages'] = $menu['pages']->sortBy('position');
             view()->share('menu_'.$slug, view('layout.menu', $menu)->render());
+            view()->share('menu_footer', $footer['menus']['footer']);
+
         }
     }
     /**
@@ -77,10 +80,14 @@ class Pages extends AbstractApiService
      *
      * @return Illuminate\Support\
      */
-    public function getMenus($slug = NULL)
+    public function getMenus($slug = NULL, $filter = '[type]=navigation')
     {
         // get pages via api
-        $response = $this->api()->get('/collections?filter[type]=navigation');
+        $response = $this->api()->get('/collections?filter'.$filter);
+
+        if(!isset($response['included'])){
+            return;
+        }
         $included = array_column($response['included'],NULL,'id');
         // index menu by slug
         $menus = $this->assemble($response['data'], $included)->keyBy(function($item) {
