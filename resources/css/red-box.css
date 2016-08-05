@@ -1,0 +1,30 @@
+.red-box h4{
+	color: rgb(255,255,255);
+	margin-top: 0;
+    margin-bottom: 10px;
+}
+.red-box{
+	padding: 20px;
+	background-color: rgb(225,70,75);
+	color: rgb(255,255,255);
+}
+.red-box ul{
+    list-style: none;
+}
+.red-box p{
+	margin-top: 10px;
+}
+.red-box .label{
+	color: rgb(120,30,35);
+}
+.red-box .label--full{
+    display: inline-block;
+	width: 100%;
+}
+.red-box a{
+	color: rgb(255,255,255);
+	text-decoration: underline;
+}
+.red-box a:hover{
+	text-decoration: none;
+}

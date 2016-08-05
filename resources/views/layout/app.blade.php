@@ -14,6 +14,7 @@
         <main class="o-content o-grid">
             @yield('content')
         </main>
+        @include('layout.footer')
         <script src='{{ asset(env('PATH_PREFIX').elixir("js/app.js")) }}'></script>
     </body>
 </html>
