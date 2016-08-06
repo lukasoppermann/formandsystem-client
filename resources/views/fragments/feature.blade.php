@@ -7,9 +7,9 @@
     $text['meta']       = collect($text['meta']);
 ?>
 <div class="{{$fragment['classes'] or ''}} {{$fragment['custom_classes'] or ''}}">
-    <div class="">
-        <img src="">
-    </div>
+    <figure class="o-image {{$fragment['classes'] or ''}} {{$fragment['custom_classes'] or ''}}">
+        <img class="o-image__img" src="{{asset('media/'.$img['filename'])}}" alt="" />
+    </figure>
     <h2 class="{{$headline->get('meta')->get('classes','')}} {{$headline->get('meta')->get('custom_classes','')}}">
         {{$headline->get('data')}}
     </h2>
