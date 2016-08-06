@@ -26,7 +26,7 @@
 	box-sizing: border-box;
 	padding: 20px;
 	display: inline-block;
-	margin: -120px 0 50px 4%;
+	margin: -110px 0 50px 4%;
 }
 .banner .o-text:after{
 	content:"";
