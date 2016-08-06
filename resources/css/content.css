@@ -31,6 +31,7 @@
 }
 .o-section.o-section--shadow{
     padding-bottom: 5rem;
+    margin-bottom: 5rem;
 }
 .o-section--shadow::after {
     display: block;
@@ -113,4 +114,7 @@
 .text-content h4{
     color: rgb(225, 70, 75);
     padding: 0 0 10px 10px;
+}
+.o-quote--turquoise{
+    color: rgb(90, 170, 150);
 }
