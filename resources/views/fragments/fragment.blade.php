@@ -9,7 +9,7 @@
         isset($fragment['meta']['columns']['lg']) ? $fragment['column'] .= ' o-grid__column--lg-'.$fragment['meta']['columns']['lg'] : '';
 ?>
 
-@if($fragment['type'] !== 'section' && $fragment['type'] !== 'collection')
+@if(in_array($fragment['type'], ['image','input','text']))
     <div class="o-fragment {{$fragment['column'] or ''}}">
 @endif
     @if(View::exists('fragments.'.$fragment['type']))

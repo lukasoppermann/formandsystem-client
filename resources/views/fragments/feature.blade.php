@@ -6,7 +6,7 @@
     $text               = collect($items->where('name','text')->first());
     $text['meta']       = collect($text['meta']);
 ?>
-<div class="{{$fragment['classes'] or ''}} {{$fragment['custom_classes'] or ''}}">
+<div class="{{$fragment['classes'] or ''}} {{$fragment['custom_classes'] or ''}} o-fragment {{$fragment['column'] or ''}}">
     @if(isset($img['relationships']['images']))
         <figure class="o-image {{$img['meta']['classes'] or ''}}">
             <img class="o-image__img" src="{{asset('media/'.$img['relationships']['images'][0]['filename'])}}" alt="" />

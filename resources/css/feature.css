@@ -5,7 +5,7 @@
     padding: var(--medium);
     box-sizing: border-box;
     width: 96%;
-    margin: 0 2% 0 2%;
+    /*margin: 0 2% 0 2%;*/
 }
 /*.o-feature.o-feature--first{
     margin-left: calc(8% - 2.5rem);
