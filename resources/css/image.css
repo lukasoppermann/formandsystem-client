@@ -1,12 +1,13 @@
 .o-image{
-    display: block;
+    display: flex;
     position: relative;
     justify-content: center;
 }
-.o-image--max-height-200{
-    max-height: 200px;
+.o-image--height-200{
+    height: 200px;
 }
 .o-image img{
     max-width: 100%;
     max-height: 100%;
+    flex: 0;
 }
