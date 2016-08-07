@@ -115,6 +115,8 @@
     color: rgb(225, 70, 75);
     padding: 0 0 10px 10px;
 }
-.o-quote--turquoise{
+.o-quote--turquoise blockquote{
     color: rgb(90, 170, 150);
+    font-size: 2.4rem;
+    margin-bottom: 5rem;
 }
