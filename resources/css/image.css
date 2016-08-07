@@ -1,7 +1,6 @@
 .o-image{
-    display: flex;
     position: relative;
-    justify-content: center;
+    text-align: center;
 }
 .o-image--max-height-200{
     height: 200px;
@@ -9,5 +8,5 @@
 .o-image img{
     max-width: 100%;
     height: auto;
-    flex: 0;
+    display: inline-block;
 }
