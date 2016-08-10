@@ -1,5 +1,6 @@
-.banner{
+.o-section.banner{
 	padding-top: 80px;
+	margin: 0 auto;
 	text-align: left;
 }
 .banner .o-image{
@@ -94,8 +95,6 @@
 	content: "➞";
 	padding-left: 5px;
 }
-
-
 
 .large .banner .block-content-copy a:hover{
 	background: rgba(165,30,40,1);

@@ -5,8 +5,12 @@
 /* ---------------------
  * Section
  */
+.o-content > .o-section{
+    display: block;
+}
 .o-section{
     position: relative;
+    width: 100%;
     max-width: 120rem;
     margin: 25px auto;
     display: block;
