@@ -5,10 +5,10 @@
 /* ---------------------
  * Section
  */
-.o-content > .o-section{
+.o-section{
     position: relative;
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 25px auto;
     display: block;
 }
 @media screen and (min-width: 600px) {
