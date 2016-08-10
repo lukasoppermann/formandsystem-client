@@ -7,10 +7,14 @@
  */
 .o-content > .o-section{
     position: relative;
-    padding: 0;
     max-width: 120rem;
     margin: 0 auto;
     display: block;
+}
+@media screen and (min-width: 600px) {
+    .o-section{
+        padding: 0 25px;
+    }
 }
 .o-section--red{
     background-color: var(--copra-red);
@@ -81,6 +85,18 @@
  }
  .block-content-image img{
    display: inline-block;
+ }
+ /* ---------------------
+  * o-text--reduced
+  */
+ .o-text.o-text--reduced h2{
+    padding: 0;
+    margin: 0 0 10px 0;
+    border: none;
+    font-size: 200%;
+    font-weight: 400;
+    text-align: left;
+    color: rgb(225, 70, 75);
  }
  /* ---------------------
   * text-content
