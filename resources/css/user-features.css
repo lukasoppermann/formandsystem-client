@@ -7,3 +7,14 @@
     display: inline-block;
     margin: 0 0 10px;
 }
+.user-features a{
+    float: left;
+    margin-top: 20px;
+    display: inline-block;
+    background: rgba(165,30,40,.75);
+    border-radius: 3px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    transition: background .5s ease,box-shadow .5s ease;
+}
