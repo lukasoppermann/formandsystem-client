@@ -42,3 +42,9 @@
     line-height: 140%;
     color: var(--dark-gray);
 }
+.o-feature.o-feature--centered{
+    text-align: center;
+}
+.o-feature.o-feature--reduced{
+    box-shadow: none;
+}
