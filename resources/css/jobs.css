@@ -45,7 +45,7 @@
 .o-job-listing .o-news li{
     margin-left: 2rem;
     list-style: none;
-    display: inline-block;
+    display: block;
     position: relative;
 }
 .o-job-listing .o-news li:before {
