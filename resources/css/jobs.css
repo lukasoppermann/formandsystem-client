@@ -28,3 +28,30 @@
     padding: 5px 10px;
     transition: background .5s ease,box-shadow .5s ease;
 }
+.o-job-listing .o-news{
+    border-left: none;
+}
+.o-job-listing .o-news h4{
+    color: var(--copra-red);
+    margin-top: 2rem;
+}
+.o-job-listing .o-news a{
+    color: var(--copra-red);
+    text-decoration: underline;
+}
+.o-job-listing .o-news a:hover{
+    text-decoration: none;
+}
+.o-job-listing .o-news li{
+    margin-left: 2rem;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+.o-job-listing .o-news li:before {
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    content: "◆";
+    color: var(--copra-red);
+}

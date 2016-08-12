@@ -17,9 +17,9 @@
             <img class="o-image__img" src="{{asset('media/'.$img['relationships']['images'][0]['filename'])}}" alt="" />
         </figure>
     @endif
-    <h2 class="{{$headline->get('meta')->get('classes','')}} {{$headline->get('meta')->get('custom_classes','')}}">
+    <h3 class="{{$headline->get('meta')->get('classes','')}} {{$headline->get('meta')->get('custom_classes','')}}">
         {{$headline->get('data')}}
-    </h2>
+    </h3>
     <div class="{{$text->get('meta')->get('classes','')}} {{$text->get('meta')->get('custom_classes','')}}">
         {!! md_convert($text->get('data')) !!}
     </div>

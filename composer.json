@@ -13,7 +13,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "formandsystem/api": "dev-master",
+        "formandsystem/api": "0.1.*",
         "league/commonmark": "^0.13.4",
         "webuni/commonmark-attributes-extension": "^0.3.2"
     },
