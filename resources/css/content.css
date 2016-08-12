@@ -23,8 +23,15 @@
 .o-section--red{
     background-color: var(--copra-red);
     color: var(--white);
+    margin: 0 auto;
 }
-.o-section--red:after, .o-section--red:before{
+.o-section--gray{
+    padding: 5rem 0;
+    background-color: rgb(250, 250, 250);
+    margin: 0 auto;
+}
+.o-section--red:after, .o-section--red:before,
+.o-section--gray:after, .o-section--gray:before{
     display: block;
     content: "";
     position: absolute;
@@ -34,7 +41,10 @@
     width: 100%;
     height: 100%;
 }
-.o-section--red:after{
+.o-section--gray:after, .o-section--gray:before{
+    background-color: rgb(250, 250, 250);
+}
+.o-section--red:after, .o-section--gray:after{
     left: auto;
     right: -100%;
 }
