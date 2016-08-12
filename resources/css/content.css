@@ -1,6 +1,7 @@
 .o-content{
     padding-top: 80px;
     width: 100%;
+    overflow: hidden;
 }
 /* ---------------------
  * Section
