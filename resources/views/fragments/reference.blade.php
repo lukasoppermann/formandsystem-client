@@ -2,6 +2,10 @@
     $items      = collect($fragment['relationships']['fragments'])->sortBy('position')->keyBy('name');
     $image      = $items->pull('image');
     $img_src    = asset('media/hospital-default.png');
+    if($image['relationships']['images'][0]['filename']){
+        $img_src    = asset('media/'.$image['relationships']['images'][0]['filename']);
+    }
+
     $title      = $items->pull('title');
     $date       = $items->pull('Inbetriebnahme');
     $umfang     = $items->pull('Umfang');
