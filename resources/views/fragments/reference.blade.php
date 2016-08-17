@@ -2,7 +2,7 @@
     $items      = collect($fragment['relationships']['fragments'])->sortBy('position')->keyBy('name');
     $image      = $items->pull('image');
     $img_src    = asset('media/hospital-default.png');
-    if($image['relationships']['images'][0]['filename']){
+    if(isset($image['relationships']['images']) && isset($image['relationships']['images'][0])){
         $img_src    = asset('media/'.$image['relationships']['images'][0]['filename']);
     }
 
