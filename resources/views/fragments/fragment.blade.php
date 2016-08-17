@@ -2,6 +2,8 @@
         // add css classes
         $fragment['classes'] = isset($fragment['meta']['classes']) ? str_replace('.','',$fragment['meta']['classes']) : '';
         $fragment['custom_classes'] = isset($fragment['meta']['custom_classes']) ? str_replace('.','',$fragment['meta']['custom_classes']) : '';
+        // anchor
+        $fragment['anchor'] = isset($fragment['meta']['anchor']) ? $fragment['meta']['anchor'] : '';
         // add columns
         $fragment['column'] = NULL;
         isset($fragment['meta']['columns']['sm']) ? $fragment['column'] .= ' o-grid__column--sm-'.$fragment['meta']['columns']['sm'] : '';

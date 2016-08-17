@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Services\Pages as PagesService;
+use App\Services\Anchors;
 use Illuminate\Http\Request;
 
 class Pages extends Controller
@@ -17,7 +18,9 @@ class Pages extends Controller
 
     public function show(Request $request)
     {
-        return view('pages.page');
+        return view('pages.page', [
+            'anchors' => new Anchors()
+        ]);
     }
 
 }
