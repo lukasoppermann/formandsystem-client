@@ -32,12 +32,12 @@ gulp.task('delete-build-files', ['rev'], function(done){
 
 gulp.task('build-js', ['clean-build'], function(){
     var files = [];
-    // var files = mainBowerFiles(['**/*.js'],{
-    //     paths: {
-    //         bowerDirectory: 'resources/bower_components',
-    //         bowerJson: 'bower.json'
-    //     }
-    // });
+    var files = mainBowerFiles(['**/*.js'],{
+        paths: {
+            bowerDirectory: 'resources/bower_components',
+            bowerJson: 'bower.json'
+        }
+    });
     // push includes
     files.push('resources/js/includes/*.js');
     // push other files

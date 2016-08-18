@@ -1,0 +1,21 @@
+{
+  "name": "formandsystem-client",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Lukas Oppermann <lukas@vea.re>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lukasoppermann/formandsystem-client",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "holmes.js": "^1.11.1"
+  }
+}

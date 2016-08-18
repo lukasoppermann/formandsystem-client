@@ -1,0 +1,35 @@
+{
+  "name": "holmes.js",
+  "description": "Fast and easy searching inside a page.",
+  "main": "js/holmes.js",
+  "authors": [
+    "Haroen Viaene <hello@haroen.me>"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "search",
+    "dom",
+    "easy",
+    "find",
+    "input"
+  ],
+  "homepage": "https://github.com/Haroenv/holmes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "1.11.1",
+  "_release": "1.11.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.11.1",
+    "commit": "5e24f3416afad90ec710a3a32457e15a480812ba"
+  },
+  "_source": "https://github.com/Haroenv/holmes.git",
+  "_target": "^1.11.1",
+  "_originalSource": "holmes.js",
+  "_direct": true
+}

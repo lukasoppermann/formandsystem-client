@@ -77,7 +77,7 @@ window.addEventListener('resize', function(f){
         var h = new holmes({
           input: '.js-collection-search input',
           find: '.js-collection-with-search .o-fragment',
-        //   minCharacters: 3,
+          minCharacters: 3,
           placeholder: '<div class="stream-emptyState">keine Ergebnisse</div>',
         });
 

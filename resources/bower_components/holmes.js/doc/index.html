@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="css/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav class="main-nav">
+    <header class="nav-header"><h2><a href="index.html">Home</a></h2></header><header class="nav-header"><h3><span>Modules</span></h3></header><ul><li><a href="module-holmes.html">holmes</a><ul class='methods'><li class='nav-type-header'>Methods</li><li data-type='method'><a href="module-holmes.html#clear">clear</a></li></ul><ul class='typedefs'><li class='nav-type-header'>Typedefs</li><li data-type='typedef'><a href="module-holmes.html#~onChange">onChange</a></li></ul></li></ul>
+</nav>
+
+<main id="main" class="main-content">
+    <section>
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article class="card"><h1><a href="https://www.npmjs.com/package/holmes.js"><img alt="Holmes.js" src="https://haroen.me/holmes/images/logo.png" height="50px"></img></a></h1><blockquote>
+<p>Fast and easy searching inside a page.</p>
+</blockquote>
+<p><a href="https://travis-ci.org/Haroenv/holmes"><img src="https://travis-ci.org/Haroenv/holmes.svg?branch=gh-pages" alt="Build Status"></a>
+<a href="https://www.npmjs.com/package/holmes.js"><img src="https://badge.fury.io/js/holmes.js.svg" alt="npm version"></a>
+<a href="https://badge.fury.io/bo/holmes.js"><img src="https://badge.fury.io/bo/holmes.js.svg" alt="Bower version"></a>
+<a href="https://gitter.im/Haroenv/holmes?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Haroenv/holmes.svg" alt="Join the chat at https://gitter.im/Haroenv/holmes"></a></p>
+<h2>Installation</h2><p>You can install <code>holmes</code> with either <code>npm</code> or <code>bower</code> under the package name <code>holmes.js</code>. For <code>npm</code> that looks like this:</p>
+<pre class="prettyprint source"><code>$ npm install --save holmes.js</code></pre><p>After which you can add it in your page with i.e. browserify or loading the module in a different script tag.</p>
+<p>You have to make sure that you have a <code>css</code> rule for the class <code>.hidden</code> that hides elements however you want. One option is to have this:</p>
+<pre class="prettyprint source lang-css"><code>.hidden {
+  display: none;
+}</code></pre><p>but this could be any <code>css</code> you want.</p>
+<h2>Usage</h2><p><a href="https://haroen.me/holmes/">demo</a></p>
+<h3>Simple example</h3><pre class="prettyprint source lang-js"><code>holmes({
+  input: '.search input', // default: input[type=search]
+  find: '.results div' // querySelectorAll that matches each of the results individually
+})</code></pre><h3>All options</h3><pre class="prettyprint source lang-js"><code>holmes({
+  // queryselector for the input
+  input: '.search input',
+  // queryselector for element to search in
+  find: '.results article',
+  // (optional) text to show when no results
+  placeholder: 'no results',
+  class: {
+    // (optional) class to add to matched elements
+    visible: 'visible',
+    // (optional) class to add to non-matched elements
+    hidden: 'hidden'
+  },
+  // (optional) if true, this will refresh the content every search
+  dynamic: false,
+  // (optional) needs to be true if the input is a contenteditable field instead of a
+  contenteditable: false,
+  // (optional) in case you don't want to wait for DOMContentLoaded before starting Holmes:
+  instant: true,
+  // (optional) if you want to start searching after a certain amount of characters are typed
+  minCharacters: 5
+});</code></pre><p><a href="https://haroen.me/holmes/doc">full documentation</a></p>
+<p>You can also clear a holmes input programmatically, by using:</p>
+<pre class="prettyprint source lang-js"><code>var h = new holmes({options});
+h.clear();</code></pre><h3>Showcase</h3><table>
+<thead>
+<tr>
+<th>What</th>
+<th>who</th>
+<th>image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://bullg.it">bullg.it</a></td>
+<td><a href="https://github.com/haroenv">@haroenv</a></td>
+<td><img alt="screenshot of bullg.it" src="https://haroen.me/holmes/images/screen-bullgit.png" width="100%" /></td>
+</tr>
+<tr>
+<td><a href="https://lukyvj.github.io/family.scss">family.scss</a></td>
+<td><a href="https://github.com/lukyvj">@lukyvj</a></td>
+<td><img alt="screenshot of family.scss" src="https://haroen.me/holmes/images/screen-family.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>I'd love to find out how people use my project, <a href="https://github.com/Haroenv/holmes/issues/new?title=add+my+project+to+usages&amp;body=who%7Cwhat%0D%0A---%7C---%0D%0A%40myusername%7C%5Bmy+project%5D%28https%3A%2F%2Flink-to-project.com%29%0D%0A%0D%0ASome+explanation+what+it+is">let me know</a> if you want to be featured!</p>
+<h3>Questions?</h3><p>Compatible up to IE9.</p>
+<p>Let me know on twitter: <a href="https://twitter.com/haroenv">@haroenv</a>.</p>
+<h2>Contributing</h2><p>Contributions are always welcome! Here are some loose guidelines:</p>
+<ul>
+<li>use <code>feature branches</code></li>
+<li>don't make it slower</li>
+<li>explain why you want a feature</li>
+<li><code>npm run doc</code> to recreate the documentation</li>
+</ul>
+<p>But I don't bite, if you have any questions or insecurities, hit me up for example on <a href="https://gitter.im/Haroenv/holmes?utm_source=readme&amp;utm_medium=link&amp;utm_content=link">gitter</a>.</p>
+<h2>License</h2><p>Apache 2.0</p></article>
+    </section>
+
+
+
+
+
+
+    </section>
+</main>
+
+
+<footer class="main-footer">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Aug 18 2016 09:34:45 GMT+0000 (UTC)
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

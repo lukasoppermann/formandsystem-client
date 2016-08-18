@@ -1,0 +1,35 @@
+{
+  "name": "holmes.js",
+  "version": "1.11.1",
+  "description": "Fast and easy searching inside a page.",
+  "main": "js/holmes.js",
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint js/holmes.js",
+    "doc": "jsdoc -t node_modules/hopsdoc -R README.md -d doc js/holmes.js"
+  },
+  "keywords": [
+    "search",
+    "dom"
+  ],
+  "author": "Haroen Viaene <hello@haroen.me>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haroenv/holmes.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/Haroenv/holmes/issues"
+  },
+  "homepage": "https://haroen.me/holmes/",
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "hopsdoc": "^0.1.7",
+    "jsdoc": "^3.4.0"
+  }
+}
