@@ -56,10 +56,6 @@ window.addEventListener('resize', function(f){
 // ---------------------------
 // Cards
 //
-// var findAncestor = function (el, cls) {
-//     while ((el = el.parentElement) && !el.classList.contains(cls));
-//     return el;
-// };
     var references = document.querySelectorAll('.o-reference');
     Array.prototype.forEach.call(references, function(item, i){
         item.querySelector('.js-card-details').addEventListener('click', function(e){
@@ -67,19 +63,34 @@ window.addEventListener('resize', function(f){
                 item.classList.remove('is-turned');
             });
             item.classList.add('is-turned');
-            // $('.card-overlay').css({'width':$(window).width(),'height':$(window).height()}).addClass('is-active');
         });
         item.querySelector('.js-close').addEventListener('click', function(){
             item.classList.remove('is-turned');
         });
     });
+    // ---------------------------
+    // Search
+    //
+    if(document.querySelector('.js-collection-search') !== null){
+        var searchInput = document.querySelector('.js-collection-search input');
+        var countDisplay = document.querySelector('.js-searchable-itemCount');
+        var h = new holmes({
+          input: '.js-collection-search input',
+          find: '.js-collection-with-search .o-fragment',
+        //   minCharacters: 3,
+          placeholder: '<div class="stream-emptyState">keine Ergebnisse</div>',
+        });
 
-    // $('.card').find('.js-close').on('click', function(){
-		// $('.card').find('.js-close').on('click', function(){
-		// 	$(this).parents('.card').removeClass('is-active');
-		// 	$('.card-overlay').removeClass('is-active');
-		// });
-		// $('.card-overlay').on('click', function(){
-		// 	$('.card.is-active').removeClass('is-active');
-		// 	$('.card-overlay').removeClass('is-active');
-		// });
+    var updateCount = function(countDisplay){
+        setTimeout(function(){
+            var count = document.querySelectorAll('.js-collection-with-search .o-fragment:not(.hidden)').length;
+            var suffix = count == 1 ? ' Ergebnis' : ' Ergebnisse';
+            countDisplay.innerHTML =  count + suffix;
+        },100);
+    }
+    updateCount(countDisplay);
+
+    searchInput.addEventListener('input', function(){
+        updateCount(countDisplay);
+    });
+}

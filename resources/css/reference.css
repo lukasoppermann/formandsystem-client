@@ -1,6 +1,9 @@
 /* ----------------------
 		Module: Cards
 */
+.hidden {
+  display: none;
+}
 .o-reference-collection{
     display: flex;
     flex-direction: row;
@@ -194,4 +197,59 @@
 }
 .o-reference__item .o-reference__item-title--red{
     color: var(--copra-red);
+}
+/* ----------------------
+    Module: Searchable
+*/
+.js-collection-search{
+    float: left;
+    height: 36px;
+    padding: 0 20px;
+    clear: both;
+    margin-bottom: 25px;
+}
+.o-reference-search-box{
+    float: left;
+    border: 2px solid rgb(200,200,200);
+    color: rgb(100,100,100);
+    font-weight: 400;
+    line-height: 100%;
+    width: calc(100% - 125px);
+    height: 100%;
+    max-width: 400px;
+    padding: 7px 6px 6px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 16px;
+    border-right-width: 0;
+}
+.o-reference-search-box:focus{
+  outline: none;
+  border-color: rgb(225,70,75);
+  color: rgb(225,70,75);
+}
+.stream-emptyState{
+  font-weight: 600;
+  font-size: 32px;
+  color: rgb(200,200,200);
+  text-align: center;
+  width: 100%;
+  padding: 50px 0;
+}
+.stream-itemCount{
+  float: left;
+  background-color: rgb(225,70,75);
+  border: 2px solid rgb(225,70,75);
+  color: rgb(255,255,255);
+  padding: 7px 6px 6px;
+  font-size: 16px;
+  line-height: 100%;
+  width: 125px;
+  height: 100%;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
 }
