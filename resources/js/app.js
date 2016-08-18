@@ -81,16 +81,16 @@ window.addEventListener('resize', function(f){
           placeholder: '<div class="stream-emptyState">keine Ergebnisse</div>',
         });
 
-    var updateCount = function(countDisplay){
+    var updateCount = function(holmes, countDisplay){
         setTimeout(function(){
-            var count = document.querySelectorAll('.js-collection-with-search .o-fragment:not(.hidden)').length;
+            count = holmes.count().visible;
             var suffix = count == 1 ? ' Ergebnis' : ' Ergebnisse';
             countDisplay.innerHTML =  count + suffix;
         },100);
     }
-    updateCount(countDisplay);
+    updateCount(h, countDisplay);
 
     searchInput.addEventListener('input', function(){
-        updateCount(countDisplay);
+        updateCount(h, countDisplay);
     });
 }
