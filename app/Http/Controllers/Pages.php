@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Services\Pages as PagesService;
 use App\Services\Anchors;
 use Illuminate\Http\Request;
+use Cache;
 
 class Pages extends Controller
 {
@@ -18,9 +19,13 @@ class Pages extends Controller
 
     public function show(Request $request)
     {
-        return view('pages.page', [
-            'anchors' => new Anchors()
-        ]);
+        if(!Cache::has('page-'.$request->path())){
+            $view = view('pages.page', [
+                'anchors' => new Anchors()
+            ])->render();
+            Cache::forever('page-'.$request->path(),$view);
+        }
+        return Cache::get('page-'.$request->path());
     }
 
 }

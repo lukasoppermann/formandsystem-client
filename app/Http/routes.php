@@ -15,7 +15,7 @@ Route::get('/', function(){
 });
 Route::post('/bust-cache', function(\Illuminate\Http\Request $request){
     if($request->json('code') === env('API_CACHE_SECRET')){
-        \Log::debug('Kill cache');
+        \Cache::flush();
     }
 });
 
