@@ -35,7 +35,7 @@ class Pages extends AbstractApiService
     {
         // get all menus
         $this->menus = $this->getMenus(array_slice(app('request')->segments(), -1)[0]);
-        $footer = $this->getMenus(array_slice(app('request')->segments(), -1)[0], '[slug]=footer');
+        $footer = $this->getMenus(array_slice(app('request')->segments(), -1)[0], '[key]=footer-navigation');
         // only run in get requests
         if( app('request')->method() === 'GET' ){
             // get active path
@@ -80,7 +80,7 @@ class Pages extends AbstractApiService
      *
      * @return Illuminate\Support\
      */
-    public function getMenus($slug = NULL, $filter = '[type]=navigation')
+    public function getMenus($slug = NULL, $filter = '[key]=main-navigation')
     {
         // get pages via api
         $response = $this->api()->get('/collections?filter'.$filter);
@@ -97,7 +97,7 @@ class Pages extends AbstractApiService
             // index pages by slug
             $menu['relationships']['pages'] = $menu['relationships']['pages']->keyBy(function($item){
                 return $item['slug'];
-            });
+            })->sortBy('position');
             // merge relationships
             $menu = array_merge($menu, $menu['relationships']);
             unset($menu['relationships']);
