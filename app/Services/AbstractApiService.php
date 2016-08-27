@@ -14,7 +14,7 @@ abstract class AbstractApiService
         // merge config
         $config = array_merge([
             'url'           => env('FS_API_URL'),
-            'version'       => '1',
+            'version'       => 1,
             'client_id'     => env('FS_API_CLIENT_ID'),
             'client_secret' => env('FS_API_CLIENT_SECRET'),
             'cache'         => true

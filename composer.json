@@ -17,6 +17,7 @@
         "league/commonmark": "^0.13.4",
         "webuni/commonmark-attributes-extension": "^0.3.2"
     },
+    "prefer-stable": true,
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
