@@ -50,12 +50,13 @@ class Pages extends AbstractApiService
             view()->share('active', $this->active);
         }
         // build & share menus
-        foreach($this->menus['menus'] as $slug => $menu){
-            $menu['pages'] = $menu['pages']->sortBy('position');
-            view()->share('menu_'.$slug, view('layout.menu', $menu)->render());
-            view()->share('menu_footer', $footer['menus']['footer']);
-
+        if($this->menus['menus'] !== null){
+            foreach($this->menus['menus'] as $slug => $menu){
+                $menu['pages'] = $menu['pages']->sortBy('position');
+                view()->share('menu_'.$slug, view('layout.menu', $menu)->render());
+            }
         }
+        view()->share('menu_footer', $footer['menus']['footer']);
     }
     /**
      * get active url parts
