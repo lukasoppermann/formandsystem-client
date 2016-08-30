@@ -13,6 +13,7 @@ set :user, "lukasoppermann"
 set :format_options, log_file: "storage/logs/capistrano.log"
 set :default_env, { path: "/usr/local/bin:$PATH" }
 
+
 set :linked_dirs, %w( media )
 
 namespace :deploy do
