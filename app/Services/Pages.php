@@ -33,6 +33,7 @@ class Pages extends AbstractApiService
      */
     public function __construct(Request $request)
     {
+
         // get all menus
         $this->menus = $this->getMenus(array_slice(app('request')->segments(), -1)[0]);
         $footer = $this->getMenus(array_slice(app('request')->segments(), -1)[0], '[key]=footer-navigation');
@@ -84,33 +85,41 @@ class Pages extends AbstractApiService
     public function getMenus($slug = NULL, $filter = '[key]=main-navigation')
     {
         // get pages via api
-        $response = $this->api()->get('/collections?filter'.$filter);
+        if(!\Cache::has('menu./collections?filter'.$filter)){
 
-        if(!isset($response['included'])){
-            return;
-        }
-        $included = array_column($response['included'],NULL,'id');
-        // index menu by slug
-        $menus = $this->assemble($response['data'], $included)->keyBy(function($item) {
-            return $item['slug'];
-        // merge relationships
-        })->map(function($menu){
-            // index pages by slug
-            $menu['relationships']['pages'] = $menu['relationships']['pages']->keyBy(function($item){
+            $response = $this->api()->get('/collections?filter'.$filter);
+
+            if(!isset($response['included'])){
+                return;
+            }
+            $included = array_column($response['included'],NULL,'id');
+            // index menu by slug
+            $menus = $this->assemble($response['data'], $included)->keyBy(function($item) {
                 return $item['slug'];
-            })->sortBy('position');
             // merge relationships
-            $menu = array_merge($menu, $menu['relationships']);
-            unset($menu['relationships']);
-            // return menu
-            return $menu;
-        });
+            })->map(function($menu){
+                // index pages by slug
+                $menu['relationships']['pages'] = $menu['relationships']['pages']->keyBy(function($item){
+                    return $item['slug'];
+                })->sortBy('position');
+                // merge relationships
+                $menu = array_merge($menu, $menu['relationships']);
+                unset($menu['relationships']);
+                // return menu
+                return $menu;
+            });
+
+            \Cache::forever('menu./collections?filter'.$filter, $menus);
+        }
+        // get from cache
+        $menus = \Cache::get('menu./collections?filter'.$filter);
         // get active item
         foreach($menus as $menu){
             if($menu['pages']->get($slug)){
                 $active = $menu['pages']->get($slug);
             }
         }
+
         // assemble pages
         return [
             'menus'         => $menus,
