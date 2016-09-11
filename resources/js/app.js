@@ -41,6 +41,14 @@ var positionSectionMenu = function(){
     	{
     		menu.style.right = "";
     	}
+
+        var links = menu.querySelectorAll('.js-section-menu-link a');
+        Array.prototype.forEach.call(links, function(item){
+            item.addEventListener('click', function(e){
+                e.preventDefault();
+                smoothScroll(document.querySelector(item.getAttribute('href')));
+            });
+        });
     }
 };
 positionSectionMenu();

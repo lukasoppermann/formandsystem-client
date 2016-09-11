@@ -1,7 +1,8 @@
 /*
  * Navigation scroll state
  */
-var scrollTopOffset = function(offset, callbackTrue, callbackFalse, parameter){
+(function(window){
+window.scrollTopOffset = function(offset, callbackTrue, callbackFalse, parameter){
     window.addEventListener('scroll', function(f){
         clearTimeout(f);
         f = setTimeout(function(){
@@ -13,3 +14,4 @@ var scrollTopOffset = function(offset, callbackTrue, callbackFalse, parameter){
         },10);
     });
 }
+})(window);

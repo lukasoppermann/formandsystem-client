@@ -2,3 +2,9 @@
     box-sizing: border-box;
     padding: 0 10px;
 }
+@media (max-width: 750px) {
+    .u-sm-padding-horizontal-20{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

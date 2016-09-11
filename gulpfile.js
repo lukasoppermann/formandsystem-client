@@ -42,6 +42,7 @@ gulp.task('build-js', ['clean-build'], function(){
     files.push('resources/js/includes/*.js');
     // push other files
     files.push(
+        'node_modules/smoothscroll/smoothscroll.js',
         'resources/js/app.js'
     );
     // push rest of js files
@@ -49,7 +50,7 @@ gulp.task('build-js', ['clean-build'], function(){
     return gulp.src(files)
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
-    .pipe(jsmin())
+    // .pipe(jsmin())
     .pipe(sourcemaps.write('/'))
     .pipe(gulp.dest('public/build/js'));
 });

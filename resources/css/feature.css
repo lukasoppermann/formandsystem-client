@@ -1,7 +1,7 @@
 .o-feature{
     position: relative;
     background-color: rgb(255,255,255);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 0 1px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
     padding: var(--medium);
     box-sizing: border-box;
     width: 96%;

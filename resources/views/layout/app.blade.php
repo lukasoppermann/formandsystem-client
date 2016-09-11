@@ -10,6 +10,18 @@
         <meta name="theme-color" content="rgb(255,210,0)">
         <link href="{{ asset(env('PATH_PREFIX').elixir('css/app.css')) }}" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600" rel="stylesheet" type="text/css">
+        @if (env('APP_ENV') !== 'local')
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-1850438-1', 'auto');
+              ga('send', 'pageview');
+              ga('set', 'anonymizeIp', true);
+
+            </script>
+        @endif
     </head>
     <body>
         @include('layout.header')

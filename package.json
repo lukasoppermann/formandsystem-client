@@ -33,5 +33,8 @@
     "postcss-discard-empty": "^2.1.0",
     "require-dir": "^0.3.0",
     "svgmin": "^0.1.0"
+  },
+  "dependencies": {
+    "smoothscroll": "^0.2.2"
   }
 }
