@@ -25,7 +25,10 @@ class Pages extends Controller
             ])->render();
             Cache::forever('page-'.$request->path(),$view);
         }
-        return Cache::get('page-'.$request->path());
+        
+        return view('layout.app', [
+            'page' => Cache::get('page-'.$request->path())
+        ]);
     }
 
 }

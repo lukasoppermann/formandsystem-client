@@ -26,7 +26,7 @@
     <body>
         @include('layout.header')
         <main class="o-content o-grid">
-            @yield('content')
+            {!! $page !!}
         </main>
         @include('layout.footer')
         <script src='{{ asset(env('PATH_PREFIX').elixir("js/app.js"), Request::secure()) }}'></script>

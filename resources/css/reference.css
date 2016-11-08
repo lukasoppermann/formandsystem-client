@@ -5,12 +5,12 @@
   display: none;
 }
 .o-reference-collection{
-    display: flex;
-    flex-direction: row;
+    display: block;
 }
 .o-reference{
     position: relative;
 	padding: 0 20px;
+    margin-bottom: 20px;
 	z-index: 1;
 	transition: z-index .5s ease;
 }
