@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bdea8de0b9c8c01c7fd64b8a6ee781e6",
-    "content-hash": "fc086bb7fbb1dad9ba8233403f695f47",
+    "hash": "aa348da23f6795e757f2f0f2376f74a6",
+    "content-hash": "7c410148893decbfba30904499d561bb",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -60,6 +60,51 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "contentful/contentful",
+            "version": "0.6.5-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contentful/contentful.php.git",
+                "reference": "c9206efb5e532fa28c4474188f925ebd6e98951c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contentful/contentful.php/zipball/c9206efb5e532fa28c4474188f925ebd6e98951c",
+                "reference": "c9206efb5e532fa28c4474188f925ebd6e98951c",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2.1",
+                "guzzlehttp/psr7": "~1.1",
+                "php": ">=5.5.9",
+                "psr/http-message": "~1.0",
+                "symfony/console": "~2.7|~3.0"
+            },
+            "require-dev": {
+                "jakub-onderka/php-console-highlighter": "^0.3.2",
+                "jakub-onderka/php-parallel-lint": "^0.9.2",
+                "php-vcr/phpunit-testlistener-vcr": "^1.1",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Contentful\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "SDK for the Contentful Content Delivery API",
+            "time": "2016-09-10 23:11:16"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3564,7 +3609,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "contentful/contentful": 10
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
